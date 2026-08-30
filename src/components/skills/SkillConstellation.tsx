@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { SkillItem, SkillCategory } from '../../types/portfolio';
 import {
   Html5Icon, Css3Icon, JavaScriptIcon, TypeScriptIcon, ReactIcon,
@@ -11,29 +11,29 @@ import { Database } from 'lucide-react';
 // ── Icon resolver ──────────────────────────────────────────────
 const SkillIcon: React.FC<{ icon: string; className?: string }> = ({ icon, className = 'w-5 h-5' }) => {
   switch (icon) {
-    case 'html':       return <Html5Icon className={className} />;
-    case 'css':        return <Css3Icon className={className} />;
+    case 'html': return <Html5Icon className={className} />;
+    case 'css': return <Css3Icon className={className} />;
     case 'javascript': return <JavaScriptIcon className={className} />;
     case 'typescript': return <TypeScriptIcon className={className} />;
-    case 'react':      return <ReactIcon className={className} />;
-    case 'tailwind':   return <TailwindIcon className={className} />;
-    case 'redux':      return <ReduxIcon className={className} />;
-    case 'rtk':        return <RtkQueryIcon className={className} />;
-    case 'nodejs':     return <NodejsIcon className={className} />;
-    case 'express':    return <ExpressIcon className={className} />;
-    case 'mongodb':    return <MongodbIcon className={className} />;
+    case 'react': return <ReactIcon className={className} />;
+    case 'tailwind': return <TailwindIcon className={className} />;
+    case 'redux': return <ReduxIcon className={className} />;
+    case 'rtk': return <RtkQueryIcon className={className} />;
+    case 'nodejs': return <NodejsIcon className={className} />;
+    case 'express': return <ExpressIcon className={className} />;
+    case 'mongodb': return <MongodbIcon className={className} />;
     case 'database':
-    case 'postgres':   return <PostgresIcon className={className} />;
-    case 'prisma':     return <PrismaIcon className={className} />;
+    case 'postgres': return <PostgresIcon className={className} />;
+    case 'prisma': return <PrismaIcon className={className} />;
     case 'api':
-    case 'rest':       return <RestApiIcon className={className} />;
+    case 'rest': return <RestApiIcon className={className} />;
     case 'websocket':
     case 'websockets': return <WebSocketsIcon className={className} />;
-    case 'swagger':    return <SwaggerIcon className={className} />;
-    case 'apidog':     return <ApidogIcon className={className} />;
-    case 'git':        return <GitIcon className={className} />;
-    case 'github':     return <GithubIcon className={className} />;
-    default:           return <Database className={`${className} text-indigo-400`} />;
+    case 'swagger': return <SwaggerIcon className={className} />;
+    case 'apidog': return <ApidogIcon className={className} />;
+    case 'git': return <GitIcon className={className} />;
+    case 'github': return <GithubIcon className={className} />;
+    default: return <Database className={`${className} text-indigo-400`} />;
   }
 };
 
@@ -50,10 +50,10 @@ interface ClusterConfig {
 }
 
 const CLUSTERS: ClusterConfig[] = [
-  { label: 'Frontend',  category: 'frontend',  cx: 240, cy: 290, radius: 145, accentColor: '#6366f1', glowColor: 'rgba(99,102,241,0.5)',  startAngle: -90 },
-  { label: 'Backend',   category: 'backend',   cx: 730, cy: 190, radius: 125, accentColor: '#10b981', glowColor: 'rgba(16,185,129,0.5)',  startAngle: 30  },
-  { label: 'Database',  category: 'database',  cx: 770, cy: 485, radius: 105, accentColor: '#f59e0b', glowColor: 'rgba(245,158,11,0.5)',   startAngle: 30  },
-  { label: 'Tools',     category: 'tools',     cx: 470, cy: 520, radius: 65,  accentColor: '#ef4444', glowColor: 'rgba(239,68,68,0.5)',    startAngle: 0   },
+  { label: 'Frontend', category: 'frontend', cx: 240, cy: 290, radius: 145, accentColor: '#6366f1', glowColor: 'rgba(99,102,241,0.5)', startAngle: -90 },
+  { label: 'Backend', category: 'backend', cx: 730, cy: 190, radius: 125, accentColor: '#10b981', glowColor: 'rgba(16,185,129,0.5)', startAngle: 30 },
+  { label: 'Database', category: 'database', cx: 770, cy: 485, radius: 105, accentColor: '#f59e0b', glowColor: 'rgba(245,158,11,0.5)', startAngle: 30 },
+  { label: 'Tools', category: 'tools', cx: 470, cy: 520, radius: 65, accentColor: '#ef4444', glowColor: 'rgba(239,68,68,0.5)', startAngle: 0 },
 ];
 
 // Arrange nodes in a circle around cluster center
