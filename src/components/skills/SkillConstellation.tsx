@@ -52,7 +52,7 @@ interface ClusterConfig {
 const CLUSTERS: ClusterConfig[] = [
   { label: 'Frontend', category: 'frontend', cx: 240, cy: 300, radius: 150, accentColor: '#6366f1', glowColor: 'rgba(99,102,241,0.5)', startAngle: -90 },
   { label: 'Backend', category: 'backend', cx: 730, cy: 180, radius: 125, accentColor: '#10b981', glowColor: 'rgba(16,185,129,0.5)', startAngle: 0 },
-  { label: 'Database', category: 'database', cx: 800, cy: 535, radius: 100, accentColor: '#f59e0b', glowColor: 'rgba(245,158,11,0.5)', startAngle: 0 },
+  { label: 'Database', category: 'database', cx: 800, cy: 535, radius: 110, accentColor: '#f59e0b', glowColor: 'rgba(245,158,11,0.5)', startAngle: -90 },
   { label: 'Tools', category: 'tools', cx: 470, cy: 550, radius: 65, accentColor: '#ef4444', glowColor: 'rgba(239,68,68,0.5)', startAngle: 0 },
 ];
 
@@ -151,7 +151,7 @@ export const SkillConstellation: React.FC<SkillConstellationProps> = ({ skills, 
             cy={s.y}
             r={s.r}
             fill="white"
-            opacity={0.2}
+            opacity={0.25}
             className="animate-pulse"
             style={{ animationDelay: `${s.delay}s`, animationDuration: '3s' }}
           />
@@ -225,14 +225,14 @@ export const SkillConstellation: React.FC<SkillConstellationProps> = ({ skills, 
               <circle cx={cx} cy={cy} r={7} fill={cluster.accentColor} opacity={0.95} />
               {/* Label */}
               <text
-                x={cx} y={cy - 32}
+                x={cx} y={cy - 30}
                 textAnchor="middle"
                 fill={cluster.accentColor}
                 fontSize={13}
                 fontWeight={800}
                 letterSpacing={2.5}
                 fontFamily="monospace"
-                opacity={0.9}
+                opacity={0.95}
               >
                 {cluster.label.toUpperCase()}
               </text>
@@ -280,15 +280,15 @@ export const SkillConstellation: React.FC<SkillConstellationProps> = ({ skills, 
               {/* Color fill overlay on hover */}
               <circle r={nodeR} fill={skill.color} opacity={isHov ? 0.18 : 0.06} className="transition-all duration-300" />
 
-              {/* Skill name label below */}
+              {/* Skill name label below - high contrast theme-aware fill */}
               <text
                 y={nodeR + 18}
                 textAnchor="middle"
-                fill={isHov ? skill.color : '#e2e8f0'}
-                fontSize={isHov ? 13 : 11.5}
-                fontWeight={isHov ? 700 : 600}
+                fontSize={isHov ? 13 : 12}
+                fontWeight={700}
                 fontFamily="system-ui, sans-serif"
-                className="transition-all duration-300 select-none"
+                className={`transition-all duration-300 select-none ${isHov ? '' : 'fill-slate-900 dark:fill-slate-100'}`}
+                style={{ fill: isHov ? skill.color : undefined }}
               >
                 {skill.name}
               </text>
