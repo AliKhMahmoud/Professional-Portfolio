@@ -207,7 +207,7 @@ export const portfolioData: PortfolioData = {
     location: "Zayouna, Baghdad, Iraq (Open to Remote Worldwide)",
     availableForFreelance: true,
     socials: [
-      { platform: "GitHub", url: "https://github.com", icon: "github" },
+      { platform: "GitHub", url: "https://github.com/AliKhMahmoud", icon: "github" },
       { platform: "LinkedIn", url: "https://www.linkedin.com/in/ali-mahmoud-b26817240?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: "linkedin" },
       { platform: "Instagram", url: "https://www.instagram.com/ali.mhmod.1257", icon: "instagram" },
       { platform: "Facebook", url: "https://www.facebook.com/ali.mhmod.1257", icon: "facebook" },
