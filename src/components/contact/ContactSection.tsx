@@ -5,7 +5,7 @@ import { portfolioData } from '../../data/portfolioData';
 import { SectionBadge } from '../ui/SectionBadge';
 import { Button } from '../ui/Button';
 import { TestimonialCard } from '../testimonials/TestimonialCard';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from '../ui/SocialIcons';
+import { GithubIcon, LinkedinIcon, InstagramIcon, FacebookIcon, TelegramIcon, WhatsappIcon } from '../ui/SocialIcons';
 
 interface ContactSectionProps {
   onSuccessToast?: (msg: string) => void;
@@ -63,6 +63,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
         return <LinkedinIcon className={iconClass} />;
       case 'instagram':
         return <InstagramIcon className={iconClass} />;
+      case 'facebook':
+        return <FacebookIcon className={iconClass} />;
+      case 'telegram':
+        return <TelegramIcon className={iconClass} />;
+      case 'whatsapp':
+        return <WhatsappIcon className={iconClass} />;
       default:
         return <Mail className={iconClass} />;
     }
@@ -75,7 +81,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* Left Column (Col 1-7): Inline Contact Form */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <div>
@@ -199,7 +205,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
 
           {/* Right Column (Col 8-12): Follow Me & Direct Contact ON TOP, Testimonial Card BELOW */}
           <div className="lg:col-span-5 space-y-6 text-left">
-            
+
             {/* Top Card: Contact Info & Follow Me */}
             <div className="p-6 rounded-2xl bg-slate-900/60 dark:bg-[#0d1222]/80 light:bg-white border border-slate-800/80 dark:border-slate-800 light:border-slate-200/80 shadow-md space-y-5">
               <div>

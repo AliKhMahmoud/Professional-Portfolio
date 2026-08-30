@@ -65,7 +65,7 @@ export interface TestimonialItem {
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: 'github' | 'linkedin' | 'twitter' | 'instagram' | 'mail' | 'phone';
+  icon: 'github' | 'linkedin' | 'twitter' | 'instagram' | 'mail' | 'phone' | 'facebook' | 'telegram' | 'whatsapp';
 }
 
 export interface ContactInfo {

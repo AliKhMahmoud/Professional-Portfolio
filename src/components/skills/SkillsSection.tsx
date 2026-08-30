@@ -13,7 +13,6 @@ export const SkillsSection: React.FC = () => {
     { id: 'frontend', label: 'Frontend' },
     { id: 'backend', label: 'Backend' },
     { id: 'database', label: 'Database' },
-    { id: 'devops', label: 'DevOps & Tools' },
   ];
 
   const filteredSkills = activeCategory === 'all'

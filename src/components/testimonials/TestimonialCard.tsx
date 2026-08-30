@@ -23,11 +23,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial })
 
       {/* Author details */}
       <div className="flex items-center gap-3 pt-2 border-t border-slate-800/60 dark:border-slate-800 light:border-slate-100">
-        <img
-          src={testimonial.avatarUrl}
-          alt={testimonial.author}
-          className="w-9 h-9 rounded-full object-cover border border-slate-700 dark:border-slate-700 light:border-slate-200 shadow-sm"
-        />
+
         <div>
           <h4 className="text-xs sm:text-sm font-bold text-white dark:text-white light:text-slate-900 leading-tight">
             {testimonial.author}
