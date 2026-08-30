@@ -5,7 +5,7 @@ import { SectionBadge } from '../ui/SectionBadge';
 import { StatCard } from './StatCard';
 
 const cvImages = ['/images/cv/1.png', '/images/cv/2.png'];
-const cvDriveUrl = 'https://drive.google.com/file/d/1OcK6_ko978uQtzpqHTszPVjzLr1n5ItS/view?usp=sharing';
+const cvDriveUrl = 'https://drive.google.com/file/d/1_vHVea0BfmEACoqqRelSuh1qaB-Jn8jO/view?usp=sharing';
 
 // ── Inline CV Slider Lightbox ────────────────────────────────
 interface CvLightboxProps {
