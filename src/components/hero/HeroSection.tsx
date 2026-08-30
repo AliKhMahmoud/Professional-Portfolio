@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Download } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { portfolioData } from '../../data/portfolioData';
 import { SectionBadge } from '../ui/SectionBadge';
 import { Button } from '../ui/Button';
@@ -9,7 +9,7 @@ interface HeroSectionProps {
   onDownloadCV: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onDownloadCV }) => {
+export const HeroSection: React.FC<HeroSectionProps> = () => {
   const { profile } = portfolioData;
 
   return (
