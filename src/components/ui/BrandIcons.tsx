@@ -181,11 +181,16 @@ export const RestApiIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...pro
   </svg>
 );
 
-// WebSockets Official Lightning/Network Vector Icon
+// WebSockets Official Socket/Network Logo SVG
 export const WebSocketsIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
   <svg viewBox="0 0 256 256" className={className} {...props}>
-    <rect width="256" height="256" rx="56" fill="#D97706" />
-    <path d="M142 36L64 140h56l-18 80 86-108h-56l20-76z" fill="#FFFFFF" stroke="#FFFFFF" strokeWidth="6" strokeLinejoin="round" />
+    <rect width="256" height="256" rx="60" fill="#EA580C" />
+    {/* Socket plug 1 (top-right arrow) */}
+    <path d="M72 108h72c12 0 20-8 20-20V68" fill="none" stroke="#FFFFFF" strokeWidth="20" strokeLinecap="round" />
+    <path d="M144 52l20 16-20 16" fill="none" stroke="#FFFFFF" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
+    {/* Socket plug 2 (bottom-left arrow) */}
+    <path d="M184 148h-72c-12 0-20 8-20 20v20" fill="none" stroke="#FFFFFF" strokeWidth="20" strokeLinecap="round" />
+    <path d="M112 204l-20-16 20-16" fill="none" stroke="#FFFFFF" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -200,17 +205,29 @@ export const DockerIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...prop
 export const SwaggerIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
   <svg viewBox="0 0 256 256" className={className} {...props}>
     <circle cx="128" cy="128" r="120" fill="#85EA2D" />
-    <path d="M128 35c-51.3 0-93 41.7-93 93s41.7 93 93 93 93-41.7 93-93-41.7-93-93-93zm0 166c-40.3 0-73-32.7-73-73s32.7-73 73-73 73 32.7 73 73-32.7 73-73 73z" fill="#173647" />
-    <circle cx="128" cy="128" r="48" fill="#173647" />
-    <circle cx="128" cy="128" r="28" fill="#85EA2D" />
+    {/* Left curly brace { */}
+    <path d="M98 84c-10 0-16 6-16 16v16c0 10-6 12-14 12 8 0 14 2 14 12v16c0 10 6 16 16 16" fill="none" stroke="#173647" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
+    {/* Right curly brace } */}
+    <path d="M158 84c10 0 16 6 16 16v16c0 10 6 12 14 12-8 0-14 2-14 12v16c0 10-6 16-16 16" fill="none" stroke="#173647" strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
+    {/* Three dots ... */}
+    <circle cx="114" cy="128" r="7" fill="#173647" />
+    <circle cx="128" cy="128" r="7" fill="#173647" />
+    <circle cx="142" cy="128" r="7" fill="#173647" />
   </svg>
 );
 
 // Apidog Official Logo SVG
 export const ApidogIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
   <svg viewBox="0 0 256 256" className={className} {...props}>
-    <rect width="256" height="256" rx="56" fill="#0066FF" />
-    <path d="M70 180V76h36c18 0 30 10 30 26 0 16-12 26-30 26H88v52H70zm18-70h16c8 0 14-4 14-10s-6-10-14-10H88v20zM140 180l40-104h22l40 104h-20l-10-26h-42l-10 26h-20zm38-42h30l-15-40-15 40z" fill="#FFFFFF" />
+    <rect width="256" height="256" rx="60" fill="#4F46E5" />
+    {/* Dog ears and face emblem */}
+    <path d="M64 88c-12 0-20 12-16 28l12 48c4 16 16 24 28 24h80c12 0 24-8 28-24l12-48c4-16-4-28-16-28h-20l-16-24c-6-9-16-12-24-12h-8c-8 0-18 3-24 12L84 88H64z" fill="#FFFFFF" />
+    {/* Dog nose & eyes */}
+    <circle cx="104" cy="124" r="10" fill="#1E1B4B" />
+    <circle cx="152" cy="124" r="10" fill="#1E1B4B" />
+    <ellipse cx="128" cy="148" rx="14" ry="10" fill="#1E1B4B" />
+    {/* Cute orange tongue / API dot */}
+    <path d="M122 154c0 6 3 10 6 10s6-4 6-10z" fill="#F97316" />
   </svg>
 );
 
