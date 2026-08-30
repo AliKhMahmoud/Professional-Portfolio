@@ -202,7 +202,8 @@ export const portfolioData: PortfolioData = {
   ],
 
   contact: {
-    email: "ali.mahmoud.135246@gmail.com",
+    email: "[EMAIL_ADDRESS]",
+    phone: "+9647857855118",
     location: "Zayouna, Baghdad, Iraq (Open to Remote Worldwide and Relocate)",
     availableForFreelance: true,
     socials: [
