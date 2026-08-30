@@ -15,6 +15,10 @@
 }
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     background-color: #090d16;
     color: #f8fafc;

@@ -35,7 +35,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 dark:bg-[#080c16] light:bg-slate-50 text-slate-100 dark:text-slate-100 light:text-slate-900 transition-colors duration-300 relative selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-slate-950 dark:bg-[#080c16] light:bg-slate-50 text-slate-100 dark:text-slate-100 light:text-slate-900 transition-colors duration-300 relative selection:bg-indigo-500 selection:text-white overflow-x-hidden">
       {/* Background Dot Matrix Pattern */}
       <div className="fixed inset-0 bg-grid-pattern opacity-40 dark:opacity-30 light:opacity-40 pointer-events-none -z-10" />
 
