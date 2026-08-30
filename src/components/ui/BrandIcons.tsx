@@ -195,3 +195,22 @@ export const DockerIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...prop
     <path d="M255.8 111.4c-2.4-17.6-17.6-31.2-34.8-31.2-3.8 0-7.4.7-10.8 2-6.5-15.6-21.8-26.6-39.6-26.6-4.6 0-9 .7-13.2 2.1-4.8-19.8-22.8-34.5-44.2-34.5-1.9 0-3.8.1-5.7.4V0h-30.8v31.4c-5.7 3.3-10.4 7.9-13.8 13.4H0v120.7c0 28.9 23.5 52.4 52.4 52.4h113.3c49.7 0 90.1-40.4 90.1-90.1 0-5.7-.5-11.3-1.6-16.4zM24.7 75.6h24.7v24.7H24.7V75.6zm30.8 0h24.7v24.7H55.5V75.6zm0-30.8h24.7v24.7H55.5V44.8zm30.9 30.8h24.7v24.7H86.4V75.6zm0-30.8h24.7v24.7H86.4V44.8zm30.8 30.8h24.7v24.7h-24.7V75.6zm0-30.8h24.7v24.7h-24.7V44.8zm0-30.9h24.7v24.7h-24.7V13.9zm30.9 61.7h24.7v24.7h-24.7V75.6z" fill="#2496ED" />
   </svg>
 );
+
+// Swagger Official Logo SVG
+export const SwaggerIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
+  <svg viewBox="0 0 256 256" className={className} {...props}>
+    <circle cx="128" cy="128" r="120" fill="#85EA2D" />
+    <path d="M128 35c-51.3 0-93 41.7-93 93s41.7 93 93 93 93-41.7 93-93-41.7-93-93-93zm0 166c-40.3 0-73-32.7-73-73s32.7-73 73-73 73 32.7 73 73-32.7 73-73 73z" fill="#173647" />
+    <circle cx="128" cy="128" r="48" fill="#173647" />
+    <circle cx="128" cy="128" r="28" fill="#85EA2D" />
+  </svg>
+);
+
+// Apidog Official Logo SVG
+export const ApidogIcon: React.FC<IconProps> = ({ className = 'w-6 h-6', ...props }) => (
+  <svg viewBox="0 0 256 256" className={className} {...props}>
+    <rect width="256" height="256" rx="56" fill="#0066FF" />
+    <path d="M70 180V76h36c18 0 30 10 30 26 0 16-12 26-30 26H88v52H70zm18-70h16c8 0 14-4 14-10s-6-10-14-10H88v20zM140 180l40-104h22l40 104h-20l-10-26h-42l-10 26h-20zm38-42h30l-15-40-15 40z" fill="#FFFFFF" />
+  </svg>
+);
+

@@ -61,15 +61,23 @@ export const portfolioData: PortfolioData = {
     { id: 'sk-1', name: 'HTML5', percentage: 95, category: 'frontend', icon: 'html', color: '#E34F26' },
     { id: 'sk-2', name: 'CSS3', percentage: 90, category: 'frontend', icon: 'css', color: '#1572B6' },
     { id: 'sk-3', name: 'JavaScript', percentage: 90, category: 'frontend', icon: 'javascript', color: '#F7DF1E' },
-    { id: 'sk-4', name: 'TypeScript', percentage: 85, category: 'frontend', icon: 'typescript', color: '#3178C6' },
+    { id: 'sk-4', name: 'TypeScript', percentage: 88, category: 'frontend', icon: 'typescript', color: '#3178C6' },
     { id: 'sk-5', name: 'React', percentage: 88, category: 'frontend', icon: 'react', color: '#61DAFB' },
     { id: 'sk-6', name: 'Tailwind CSS', percentage: 90, category: 'frontend', icon: 'tailwind', color: '#06B6D4' },
     { id: 'sk-7', name: 'Redux / RTK Query', percentage: 85, category: 'frontend', icon: 'redux', color: '#764ABC' },
-    { id: 'sk-8', name: 'Node.js / Express.js', percentage: 82, category: 'backend', icon: 'nodejs', color: '#539E43' },
-    { id: 'sk-9', name: 'MongoDB', percentage: 80, category: 'database', icon: 'mongodb', color: '#47A248' },
-    { id: 'sk-10', name: 'PostgreSQL / Prisma', percentage: 80, category: 'database', icon: 'database', color: '#4169E1' },
-    { id: 'sk-11', name: 'REST API & WebSockets', percentage: 85, category: 'backend', icon: 'api', color: '#3b82f6' },
-    { id: 'sk-12', name: 'Git & GitHub', percentage: 85, category: 'tools', icon: 'git', color: '#F05032' },
+
+    { id: 'sk-8', name: 'Node.js', percentage: 85, category: 'backend', icon: 'nodejs', color: '#539E43' },
+    { id: 'sk-9', name: 'Express.js', percentage: 88, category: 'backend', icon: 'express', color: '#64748b' },
+    { id: 'sk-10', name: 'REST API', percentage: 90, category: 'backend', icon: 'api', color: '#0284C7' },
+    { id: 'sk-11', name: 'WebSockets', percentage: 85, category: 'backend', icon: 'websocket', color: '#D97706' },
+    { id: 'sk-12', name: 'Swagger', percentage: 85, category: 'backend', icon: 'swagger', color: '#85EA2D' },
+    { id: 'sk-13', name: 'Apidog', percentage: 85, category: 'backend', icon: 'apidog', color: '#0066FF' },
+
+    { id: 'sk-14', name: 'PostgreSQL', percentage: 82, category: 'database', icon: 'postgres', color: '#4169E1' },
+    { id: 'sk-15', name: 'Prisma ORM', percentage: 85, category: 'database', icon: 'prisma', color: '#5A67D8' },
+    { id: 'sk-16', name: 'MongoDB', percentage: 80, category: 'database', icon: 'mongodb', color: '#47A248' },
+
+    { id: 'sk-17', name: 'Git & GitHub', percentage: 88, category: 'tools', icon: 'git', color: '#F05032' },
   ],
 
   projects: [

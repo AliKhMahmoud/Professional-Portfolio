@@ -281,15 +281,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
                   <span className="font-medium truncate">{contact.email}</span>
                 </a>
 
-                <a
-                  href={`tel:${contact.phone.replace(/[^0-9+]/g, '')}`}
-                  className="flex items-center gap-3 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-indigo-400 light:hover:text-indigo-600 transition-colors group"
-                >
-                  <div className="p-2 rounded-lg bg-indigo-600/10 text-indigo-400 group-hover:bg-indigo-600/20 transition-colors">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <span className="font-medium">{contact.phone}</span>
-                </a>
+                {contact.phone && (
+                  <a
+                    href={`tel:${contact.phone?.replace(/[^0-9+]/g, '')}`}
+                    className="flex items-center gap-3 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-indigo-400 light:hover:text-indigo-600 transition-colors group"
+                  >
+                    <div className="p-2 rounded-lg bg-indigo-600/10 text-indigo-400 group-hover:bg-indigo-600/20 transition-colors">
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <span className="font-medium">{contact.phone}</span>
+                  </a>
+                )}
 
                 {contact.location && (
                   <div className="flex items-center gap-3 text-slate-400 dark:text-slate-400 light:text-slate-600 pt-1">
