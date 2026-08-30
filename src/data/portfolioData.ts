@@ -203,8 +203,7 @@ export const portfolioData: PortfolioData = {
 
   contact: {
     email: "ali.mahmoud.135246@gmail.com",
-    phone: "+9647857855118",
-    location: "Zayouna, Baghdad, Iraq (Open to Remote Worldwide)",
+    location: "Zayouna, Baghdad, Iraq (Open to Remote Worldwide and Relocate)",
     availableForFreelance: true,
     socials: [
       { platform: "GitHub", url: "https://github.com/AliKhMahmoud", icon: "github" },
@@ -212,6 +211,7 @@ export const portfolioData: PortfolioData = {
       { platform: "Instagram", url: "https://www.instagram.com/ali.mhmod.1257", icon: "instagram" },
       { platform: "Facebook", url: "https://www.facebook.com/ali.mhmod.1257", icon: "facebook" },
       { platform: "Telegram", url: "https://t.me/Ali_mahmoud13", icon: "telegram" },
+      { platform: "WhatsApp", url: "https://wa.me/9647857855118", icon: "whatsapp" },
     ],
   },
 };
