@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-import { Send, Mail, Phone, MapPin, User, MessageSquare, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { Send, Mail, Phone, MapPin, User, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../../data/portfolioData';
 import { SectionBadge } from '../ui/SectionBadge';
 import { Button } from '../ui/Button';
 import { TestimonialCard } from '../testimonials/TestimonialCard';
 import { GithubIcon, LinkedinIcon, InstagramIcon, FacebookIcon, TelegramIcon, WhatsappIcon } from '../ui/SocialIcons';
+
+// ── EmailJS Configuration ─────────────────────────────────────────────────────
+// 1. Go to https://www.emailjs.com and create a free account
+// 2. Add an Email Service (Gmail, Outlook, etc.) → copy the Service ID
+// 3. Create an Email Template with variables: {{from_name}}, {{from_email}},
+//    {{subject}}, {{message}} → copy the Template ID
+// 4. Go to Account → API Keys → copy your Public Key
+// 5. Replace the three values below with yours
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. 'template_xyz789'
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // e.g. 'AbCdEfGhIjK12345'
+// ─────────────────────────────────────────────────────────────────────────────
 
 interface ContactSectionProps {
   onSuccessToast?: (msg: string) => void;
@@ -22,13 +35,27 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSendError(null);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name:  formData.name,
+          from_email: formData.email,
+          subject:    formData.subject || 'Portfolio Contact Form',
+          message:    formData.message,
+          to_email:   'ali.mahmoud.135246@gmail.com',
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
+
       setSubmitted(true);
 
       // Trigger Confetti
@@ -39,9 +66,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
           origin: { y: 0.75 },
           colors: ['#6366f1', '#8b5cf6', '#a855f7', '#ec4899'],
         });
-      } catch (err) {
-        // ignore
-      }
+      } catch (_) { /* ignore */ }
 
       if (onSuccessToast) {
         onSuccessToast("Thank you! Your message has been sent successfully. I'll get back to you shortly.");
@@ -51,7 +76,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
         setSubmitted(false);
         setFormData({ name: '', email: '', subject: '', message: '' });
       }, 3500);
-    }, 900);
+
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setSendError('Failed to send message. Please try again or contact me directly via email.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderSocialIcon = (icon: string) => {
@@ -188,7 +219,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
                     </div>
                   </div>
 
-                  <div className="pt-2">
+                  <div className="pt-2 space-y-3">
                     <Button
                       type="submit"
                       disabled={isSubmitting}
@@ -197,6 +228,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onSuccessToast }
                     >
                       {isSubmitting ? 'Sending Message...' : 'Send Message'}
                     </Button>
+
+                    {/* Error message */}
+                    {sendError && (
+                      <div className="flex items-start gap-2.5 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs leading-relaxed animate-in fade-in duration-200">
+                        <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <span>{sendError}</span>
+                      </div>
+                    )}
                   </div>
                 </form>
               )}

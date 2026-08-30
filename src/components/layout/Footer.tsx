@@ -40,11 +40,11 @@ export const Footer: React.FC = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-1.5 p-2.5 px-3.5 rounded-xl bg-slate-900/90 dark:bg-slate-900/90 light:bg-white/90 backdrop-blur-md border border-slate-800 dark:border-slate-800 light:border-slate-200 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white dark:hover:text-white light:hover:text-indigo-600 hover:border-slate-700 shadow-xl shadow-black/20 transition-all duration-300 group animate-in fade-in slide-in-from-bottom-3"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-1.5 p-2.5 sm:px-3.5 rounded-xl bg-slate-900/90 dark:bg-slate-900/90 light:bg-white/90 backdrop-blur-md border border-slate-800 dark:border-slate-800 light:border-slate-200 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-white dark:hover:text-white light:hover:text-indigo-600 hover:border-slate-700 shadow-xl shadow-black/20 transition-all duration-300 group animate-in fade-in slide-in-from-bottom-3"
           aria-label="Scroll to top"
         >
-          <span className="text-xs font-medium">Back to top</span>
-          <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
+          <span className="hidden sm:inline text-xs font-medium">Back to top</span>
+          <ArrowUp className="w-4 h-4 sm:w-3.5 sm:h-3.5 group-hover:-translate-y-0.5 transition-transform" />
         </button>
       )}
     </>
